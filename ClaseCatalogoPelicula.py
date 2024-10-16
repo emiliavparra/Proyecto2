@@ -8,7 +8,7 @@ class CatalogoPelicula():  # Defino la clase Catalogo pelicula
     def __init__(self, nombre):
         self.nombre = nombre  # Para que el nombre se guarde en el parametro nombre
         # Para que la ruta del archivo se guarde en ruta_archivo
-        self.ruta_archivo = f"Archivos/{self.nombre}.txt"
+        self.ruta_archivo = f"{self.nombre}.txt"
 
     # Creo el metodo para agregrar peliculas al catalogo: Uso la clase Pelicula.
     def agregarPelicula(self, pelicula):
