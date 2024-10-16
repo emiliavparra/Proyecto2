@@ -18,8 +18,7 @@ class CatalogoPelicula():  # Defino la clase Catalogo pelicula
             # y que pueda usarse con el metodo __str__ de la clase Pelicula
             file.write(str(pelicula))
         # Imprimo un mensaje si fue agregado exitosamente para que el usuario lo sepa
-        print(f"La pelicula {pelicula.get_nombre()
-                             } ha sido agregada con exito al catalogo")
+        print(f"La pelicula {pelicula.get_nombre()} ha sido agregada con exito al catalogo")
 
     #
     def listarPeliculas(self):  # Metodo para mostrar las peliculas del catalogo
