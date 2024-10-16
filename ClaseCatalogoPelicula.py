@@ -90,17 +90,17 @@ class CatalogoPelicula():  # Defino la clase Catalogo pelicula
 
 
 # # Pruebas del codigo
-# Catalogo1 = CatalogoPelicula('Catalogo 1')
-# Catalogo1.agregarPelicula(Pelicula('Star Wars', 'Ciencia ficcion', 'Juvenil'))
-# Catalogo1.agregarPelicula(Pelicula('Peter Pan', 'Infantil', 'Juvenil'))
-# Catalogo1.agregarPelicula(Pelicula('El Padrino', 'Drama', 'Adulto'))
+Catalogo1 = CatalogoPelicula('Catalogo 1')
+Catalogo1.agregarPelicula(Pelicula('Star Wars', 'Ciencia ficcion', 'Juvenil'))
+Catalogo1.agregarPelicula(Pelicula('Peter Pan', 'Infantil', 'Juvenil'))
+Catalogo1.agregarPelicula(Pelicula('El Padrino', 'Drama', 'Adulto'))
 
-# Catalogo1.listarPeliculas()
+Catalogo1.listarPeliculas()
 
-# Catalogo1.eliminarPelicula(0)
-# Catalogo1.listarPeliculas()
+Catalogo1.eliminarPelicula(0)
+Catalogo1.listarPeliculas()
 
-# Catalogo1.buscarPelicula('Juvenil')
+Catalogo1.buscarPelicula('Juvenil')
 
-# Catalogo1.eliminarCatalogo()
-# Catalogo1.listarPeliculas()
+Catalogo1.eliminarCatalogo()
+Catalogo1.listarPeliculas()
