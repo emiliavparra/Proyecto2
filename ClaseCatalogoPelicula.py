@@ -8,7 +8,7 @@ class CatalogoPelicula():  # Defino la clase Catalogo pelicula
     def __init__(self, nombre):
         self.nombre = nombre  # Para que el nombre se guarde en el parametro nombre
         # Para que la ruta del archivo se guarde en ruta_archivo
-        self.ruta_archivo = f'Archivos/{self.nombre}.txt'
+        self.ruta_archivo = f"Archivos/{self.nombre}.txt"
 
         # Aca capturo una excepcion para que si el catalogo ya existe
         # cuando se lo intenta crear, siga trabajando sobre el prepre existente
@@ -26,8 +26,7 @@ class CatalogoPelicula():  # Defino la clase Catalogo pelicula
             # y que pueda usarse con el metodo __str__ de la clase Pelicula
             file.write(str(pelicula))
         # Imprimo un mensaje si fue agregado exitosamente para que el usuario lo sepa
-        print(f'La pelicula {pelicula} ha sido agregada con exito al catalogo {
-              self.ruta_archivo}')
+        print(f"La pelicula {pelicula} ha sido agregada con exito al catalogo {self.ruta_archivo}")
 
     #
     def listarPeliculas(self):  # Metodo para mostrar las peliculas del catalogo
@@ -90,17 +89,17 @@ class CatalogoPelicula():  # Defino la clase Catalogo pelicula
 
 
 # # Pruebas del codigo
-Catalogo1 = CatalogoPelicula('Catalogo 1')
-Catalogo1.agregarPelicula(Pelicula('Star Wars', 'Ciencia ficcion', 'Juvenil'))
-Catalogo1.agregarPelicula(Pelicula('Peter Pan', 'Infantil', 'Juvenil'))
-Catalogo1.agregarPelicula(Pelicula('El Padrino', 'Drama', 'Adulto'))
+#Catalogo1 = CatalogoPelicula("Catalogo 1")
+#Catalogo1.agregarPelicula(Pelicula("Star Wars", "Ciencia ficcion", "Juvenil"))
+#Catalogo1.agregarPelicula(Pelicula("Peter Pan", "Infantil", "Juvenil"))
+#Catalogo1.agregarPelicula(Pelicula("El Padrino", "Drama", "Adulto"))
 
-Catalogo1.listarPeliculas()
+#Catalogo1.listarPeliculas()
 
-Catalogo1.eliminarPelicula(0)
-Catalogo1.listarPeliculas()
+#Catalogo1.eliminarPelicula(0)
+#Catalogo1.listarPeliculas()
 
-Catalogo1.buscarPelicula('Juvenil')
+#Catalogo1.buscarPelicula("Juvenil")
 
-Catalogo1.eliminarCatalogo()
-Catalogo1.listarPeliculas()
+#Catalogo1.eliminarCatalogo()
+#Catalogo1.listarPeliculas()

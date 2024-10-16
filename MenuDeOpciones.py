@@ -1,10 +1,13 @@
 import os
 
-class Pelicula:
-    # ... (código de la clase Pelicula existente)
+# Importamos las clases Película y Catálogo Película
+from ClasePelicula import Pelicula
+from ClaseCatalogoPelicula import CatalogoPelicula
 
+
+# Definición del menú principal
 def mostrar_menu():
-    print("Bienvenido a tu catálogo de películas!")
+    print("\nBienvenido a tu catálogo de películas!")
     print("1. Agregar película")
     print("2. Listar películas")
     print("3. Eliminar película")
@@ -12,25 +15,55 @@ def mostrar_menu():
     print("5. Eliminar catálogo")
     print("6. Salir")
 
+# Función para agregar una película al catálogo
 def agregar_pelicula(catalogo):
-    # ... (código de la función agregar_pelicula)
+    nombre = input("Ingresa el nombre de la película: ")
+    genero = input("Ingresa el género de la película: ")
+    clasificacion = input("Ingresa la clasificación de la película: ")
+    pelicula = Pelicula(nombre, genero, clasificacion)
+    catalogo.agregarPelicula(pelicula)
 
+# Función para listar las películas del catálogo
 def listar_peliculas(catalogo):
-    # ... (código de la función listar_peliculas)
+    catalogo.listarPeliculas()
 
-# ... (funciones para las demás opciones)
+# Función para eliminar una película del catálogo
+def eliminar_pelicula(catalogo):
+    indice = int(input("Ingresa el índice de la película que quieres eliminar: ")) - 1
+    catalogo.eliminarPelicula(indice)
 
-if __name__ == "__main__":
-    catalogo = CatalogoPelicula("Mi Catálogo")
+# Función para buscar una película en el catálogo
+def buscar_pelicula(catalogo):
+    busqueda = input("Ingresa el nombre o parte del nombre de la película que buscas: ")
+    catalogo.buscarPelicula(busqueda)
 
-    while True:
-        mostrar_menu()
-        opcion = input("Ingrese una opción: ")
+# Función para eliminar todo el catálogo
+def eliminar_catalogo(catalogo):
+    catalogo.eliminarCatalogo()
 
-        if opcion == '1':
-            agregar_pelicula(catalogo)
-        elif opcion == '2':
-            listar_peliculas(catalogo)
-        # ... (demás opciones)
-        else:
-            print("Opción inválida. Intente nuevamente.")
+# Función para salir del programa
+def salir():
+    print("Gracias por usar el catálogo de películas. ¡Hasta luego!")
+    exit()
+
+# Código principal: punto de entrada donde se ejecutan todas las acciones y donde el usuario interactúa con el programa.
+catalogo = CatalogoPelicula("Mi Catálogo")
+
+while True:
+    mostrar_menu()
+    opcion = input("Por favor ingresa una opción: ")
+
+    if opcion == '1':
+        agregar_pelicula(catalogo)
+    elif opcion == '2':
+        listar_peliculas(catalogo)
+    elif opcion == '3':
+        eliminar_pelicula(catalogo)
+    elif opcion == '4':
+        buscar_pelicula(catalogo)
+    elif opcion == '5':
+        eliminar_catalogo(catalogo)
+    elif opcion == '6':
+        salir()
+    else:
+        print("No entendí qué es lo que quieres hacer, inténtalo nuevamente.")
