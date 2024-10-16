@@ -19,7 +19,3 @@ class Pelicula:
     # Uso el metodo __str__ para convertir el objeto en una string y poder utilizarlo en la clase CatalogoPelicula
     def __str__(self):
         return (f'{self.__nombre}, {self.genero}, {self.__clasificacion} \n')
-
-# Pruebo el codigo con el metodo __str__ :
-# mi_peli = Pelicula('Hola peli', 'Terror', 18)
-# print(mi_peli)
